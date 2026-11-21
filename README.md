@@ -1,27 +1,5 @@
-# The Tasting Journal — 첫 작동 버전
+# The Tasting Journal V1.0.3 (pre-release review build)
 
-## 테스트 우선순위
-1. PC (Chrome 또는 Edge)
-2. Galaxy S20 FE (Android Chrome)
-3. 이후 iPad Safari / Apple Pencil
+This build is based on V1.0.2 and includes safer record/photo save transactions, waits for canvas restoration before saving, stricter backup validation, and atomic clearing of records/media.
 
-## 설치/배포
-GitHub Pages에 배포할 경우 새 저장소 또는 별도 브랜치에 이 파일을 올리고 Pages를 활성화하세요.
-기존 Tasting Journal 배포 및 데이터와는 별개인 초기 테스트용 버전입니다. 기존 파일을 덮어쓰기 전에 기존 데이터 백업을 확보하세요.
-
-## 기능
-- 4자리 PIN (브라우저 화면 진입 게이트)
-- Beer / Whisky 8개 섹션 기록 폼
-- 기록 상세 조회, 편집, 삭제
-- IndexedDB 저장
-- 이미지 첨부, 캔버스 그림 (PC/Android에서 시험)
-- 통합 검색
-- 간단한 통계
-- JSON 백업/복원 (기록 및 이미지 데이터 포함)
-
-## 주의/제한
-- PIN은 접근 게이트일 뿐 IndexedDB의 데이터를 암호화하지 않습니다.
-- 저장 데이터는 브라우저/기기별로 독립적입니다. 자동 동기화는 없습니다.
-- 이 버전은 기능 검증용 첫 프로토타입입니다. 브라우저별 저장/캔버스/복원 테스트를 거친 뒤 개선하세요.
-- 백업 복원은 현재 데이터와 병합하며, 같은 ID의 기록은 백업 내용으로 대체됩니다.
-- 그림 Undo는 현재 전체 캔버스 지우기와 기존 저장 그림 재표시 수준의 초기 구현입니다. 완전한 단계별 Undo/Redo, 캔버스 크기 변경/회전 적응, 사진 삭제 흐름 등을 다음 개선에서 보완할 예정입니다.
+Before publishing, test on desktop and Android/iPad browsers. IndexedDB data is stored locally per browser/device. Keep a backup.
